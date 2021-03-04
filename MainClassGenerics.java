@@ -8,14 +8,16 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class MainClassGenerics {
-
+    
+    //1. метод, который меняет два элемента массива местами
     public static <T> void swapElements (T [] array, int a, int b) {
         T aCopy = array [a];
         T bCopy = array [b];
         array [a] = bCopy;
         array [b] = aCopy;
     }
-
+    
+    //2. метод, который преобразует массив в ArrayList
     public static <T> ArrayList<String> arrayToList (T [] array) {
         ArrayList arrayList = new ArrayList<>(Arrays.asList(array));
         return arrayList;
